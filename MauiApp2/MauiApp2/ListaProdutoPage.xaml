@@ -1,0 +1,54 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp2"
+             x:Class="MauiApp2.ListaProdutoPage"
+             Title="Lista de Produtos">
+
+    <Grid RowDefinitions="Auto,*" Padding="10">
+
+        <Picker x:Name="filtroCategoriaPicker"
+                Title="Filtrar por Categoria"
+                SelectedIndexChanged="FiltrarPorCategoria"
+                Grid.Row="0">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Todas</x:String>
+                    <x:String>Alimento</x:String>
+                    <x:String>Informática</x:String>
+                    <x:String>Acessórios</x:String>
+                    <x:String>Automóvel</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <CollectionView x:Name="lstProduto"
+                        Grid.Row="1"
+                        ItemsLayout="VerticalList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnProdutoSelecionado"
+                        VerticalOptions="FillAndExpand">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:Produto">
+                    <Frame Padding="10" Margin="5" CornerRadius="8" BorderColor="LightGray">
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="10">
+                            <Label Text="{Binding Categoria}" FontSize="12" TextColor="Gray" Grid.Row="0" />
+                            <Label Text="{Binding Nome}" FontSize="18" FontAttributes="Bold" Grid.Row="1" />
+                            <Label Text="{Binding Preco, StringFormat='Preço: {0:C}'}" FontSize="14" TextColor="DarkGreen" Grid.Row="2" />
+                            <Label Text="{Binding DataValidade, StringFormat='Validade: {0:dd/MM/yyyy}'}" FontSize="12" TextColor="DarkGreen" Grid.Row="3">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding EstaVencido}" Value="True">
+                                        <Setter Property="TextColor" Value="Red"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding DataValidade}" Value="{x:Null}">
+                                        <Setter Property="Text" Value="Sem validade"/>
+                                        <Setter Property="TextColor" Value="Gray"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

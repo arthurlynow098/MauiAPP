@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,50"
+            Spacing="25"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <Label Text="Home"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+
+            <Button
+                Text="Abrir Produto"
+                x:Name="btnProduto"
+                Clicked="btnProduto_Clicked"
+                BackgroundColor="#6200EE"
+                TextColor="White"
+                CornerRadius="20"
+                Padding="15"
+                FontSize="16"
+                />
+
+            <Button
+                Text="Abrir Lista de Produto"
+                x:Name="btnListaProduto"
+                Clicked="btnListaProduto_Clicked"
+                BackgroundColor="#6200EE"
+                TextColor="White"
+                CornerRadius="20"
+                Padding="15"
+                FontSize="16"
+                />
+
+            <Button
+                Text="Adicionar Produto"
+                x:Name="btnAdicionarProduto" 
+                Clicked="btnAdicionarProduto_Clicked"
+                BackgroundColor="#6200EE"
+                TextColor="White"
+                CornerRadius="20"
+                Padding="15"
+                FontSize="16"/> 
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                BackgroundColor="#03DAC5"
+                TextColor="Black"
+                CornerRadius="20"
+                Padding="15"
+                FontSize="16"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

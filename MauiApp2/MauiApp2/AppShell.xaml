@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp2"
+    Shell.BackgroundColor="White"
+    Shell.TitleColor="Black"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="🏠 Início"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="🛒 Lista de Produtos"
+        ContentTemplate="{DataTemplate local:ListaProdutoPage}"
+        Route="ListaProdutoPage" />
+
+    <ShellContent
+        Title="➕ Adicionar Produto"
+        ContentTemplate="{DataTemplate local:AdicionarProdutoPage}"
+        Route="AdicionarProdutoPage" />
+    <ShellContent
+         Title="💡 Produto"
+         ContentTemplate="{DataTemplate local:ProdutoPage}"
+         Route="ProdutoPage" />
+
+</Shell>

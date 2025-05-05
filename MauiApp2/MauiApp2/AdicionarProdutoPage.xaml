@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AdicionarProdutoPage"
+             BackgroundColor="White">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+
+        <Label Text="Adicionar Produto"
+               FontSize="26"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black"/>
+
+        <Frame Padding="10" CornerRadius="10" BorderColor="LightGray">
+            <Entry x:Name="entryNome" Placeholder="Nome do Produto" FontSize="16"/>
+        </Frame>
+
+        <Frame Padding="10" CornerRadius="10" BorderColor="LightGray">
+            <Entry x:Name="entryPreco" Placeholder="Preço" Keyboard="Numeric" FontSize="16"/>
+        </Frame>
+
+
+        <Picker x:Name="pickerCategoria" Title="Selecione a categoria">
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+
+                    <x:String>Todos</x:String>
+                    <x:String>Acessórios</x:String>
+                    <x:String>Automóvel</x:String>
+                    <x:String>Alimento</x:String>
+                    <x:String>Informática</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label>VALIDADE:</Label>
+        <DatePicker x:Name="dateValidade" Format="dd/MM/yyyy" Margin="0,10,0,0" />
+        
+        <Button Text="Salvar Produto"
+                BackgroundColor="DarkGreen"
+                TextColor="White"
+                FontSize="18"
+                CornerRadius="25"
+                HeightRequest="50"
+                Clicked="btnSalvarProduto_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
