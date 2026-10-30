@@ -4,21 +4,33 @@
 
 <p align="center">Aplicação de estudo com interface compartilhada e suporte a Android e Windows.</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/C%23-C52E36?style=flat-square" alt="C#">
-  <img src="https://img.shields.io/badge/.NET%20MAUI-24272E?style=flat-square" alt=".NET MAUI">
-  <img src="https://img.shields.io/badge/Multiplataforma-24272E?style=flat-square" alt="Multiplataforma">
-</p>
+<p align="center"><img src="assets/docs/tags.svg" alt="C# · .NET MAUI · Multiplataforma" width="72%"></p>
 
 <p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-executar">Como executar</a></p>
 
 ---
 
-## Visão geral
+<a id="explore-o-projeto"></a>
+
+![Explore o projeto](assets/docs/section-01.svg)
+
+![Mapa visual dos arquivos e responsabilidades](assets/docs/map.svg)
+
+| Área | O que você encontra | Acesso direto |
+|---|---|---|
+| **Solução** | Ponto de entrada para abrir os projetos na IDE. | [Abrir solução →](MauiApp2.sln) |
+| **Inicialização** | Configuração de inicialização do aplicativo. | [Abrir inicialização →](MauiApp2/MauiApp2.Droid/MauiProgram.cs) |
+| **Android** | Arquivos específicos da plataforma Android. | [Abrir android →](MauiApp2/MauiApp2.Droid) |
+
+<a id="visão-geral"></a>
+
+![Visão geral](assets/docs/section-02.svg)
 
 A solução (MauiApp2.sln) está organizada com separação explícita entre o núcleo compartilhado e os cabeçalhos de plataforma (MauiApp2.Droid para Android com MainActivity e recursos mipmap/drawable, além do suporte desktop Windows), permitindo compilar e depurar a partir de uma base única.
 
-## Recursos
+<a id="recursos"></a>
+
+![Recursos](assets/docs/section-03.svg)
 
 | Recurso | Como funciona |
 |---|---|
@@ -27,7 +39,9 @@ A solução (MauiApp2.sln) está organizada com separação explícita entre o n
 | Pipeline MauiProgram | Inicialização centralizada com padrão *HostBuilder* para registro de fontes, serviços e ciclo de vida. |
 | Destino .NET 9 | Configurado para aproveitar as otimizações de compilação e runtime do SDK .NET 9. |
 
-## Tecnologias
+<a id="tecnologias"></a>
+
+![Tecnologias](assets/docs/section-04.svg)
 
 - **C# & .NET 9** como linguagem e plataforma de execução;
 - **.NET MAUI** para abstração de componentes visuais multiplataforma;
@@ -53,7 +67,7 @@ flowchart LR
 ```text
 MauiAPP/
 ├── assets/
-│   └── project-animal.png          Emblema do projeto
+│   └── banner-v2.png               Banner do projeto
 ├── MauiApp2/
 │   ├── MauiApp2.Droid/                     Projeto nativo Android (Manifest, MainActivity, Resources)
 │   └── ...                                 Arquivos compartilhados da solução MAUI
@@ -64,7 +78,9 @@ MauiAPP/
 
 </details>
 
-## Como executar
+<a id="como-executar"></a>
+
+![Como executar](assets/docs/section-05.svg)
 
 1. Certifique-se de ter o **SDK .NET 9** e a workload do MAUI instalada (dotnet workload install maui).
 2. Clone o repositório:
