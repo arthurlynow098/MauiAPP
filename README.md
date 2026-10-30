@@ -1,24 +1,26 @@
 <p align="center">
-  <img src="assets/banner.png" alt="MauiApp — .NET MAUI" width="100%">
+  <img src="assets/project-animal.png" alt="Emblema de MauiAPP" width="144" height="144">
 </p>
+
+<h1 align="center">MauiAPP</h1>
+
+<p align="center">Aplicação de estudo com interface compartilhada e suporte a Android e Windows.</p>
 
 <p align="center">
-  Aplicação multiplataforma desenvolvida em C# e .NET MAUI (.NET 9) com núcleo de interface compartilhado e empacotamento nativo para Android e Windows.
+  <img src="https://img.shields.io/badge/C%23-C52E36?style=flat-square" alt="C#">
+  <img src="https://img.shields.io/badge/.NET%20MAUI-24272E?style=flat-square" alt=".NET MAUI">
+  <img src="https://img.shields.io/badge/Multiplataforma-24272E?style=flat-square" alt="Multiplataforma">
 </p>
 
-<p align="center">
-  <img alt=".NET MAUI" src="https://img.shields.io/badge/.NET_9-MAUI-C52E36?style=for-the-badge&logo=dotnet&logoColor=white">
-  <img alt="Android" src="https://img.shields.io/badge/Target-Android-11120F?style=for-the-badge&logo=android&logoColor=C52E36">
-  <img alt="Windows" src="https://img.shields.io/badge/Target-WinUI_3-18181B?style=for-the-badge&logo=windows&logoColor=C52E36">
-</p>
+<p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-executar">Como executar</a></p>
 
-## Sobre o projeto
+---
 
-O desenvolvimento multiplataforma moderno busca compartilhar a maior parte possível das regras de negócio e das telas em XAML/C# sem abrir mão do desempenho e das APIs nativas de cada sistema operacional. Este projeto acadêmico explora o **.NET MAUI (.NET Multi-platform App UI)** sobre o **.NET 9**.
+## Visão geral
 
 A solução (MauiApp2.sln) está organizada com separação explícita entre o núcleo compartilhado e os cabeçalhos de plataforma (MauiApp2.Droid para Android com MainActivity e recursos mipmap/drawable, além do suporte desktop Windows), permitindo compilar e depurar a partir de uma base única.
 
-## Principais recursos
+## Recursos
 
 | Recurso | Como funciona |
 |---|---|
@@ -29,54 +31,55 @@ A solução (MauiApp2.sln) está organizada com separação explícita entre o n
 
 ## Tecnologias
 
-<p>
-  <img alt="C#" src="https://img.shields.io/badge/C%23-C52E36?style=flat-square&logo=dotnet&logoColor=white">
-  <img alt=".NET 9" src="https://img.shields.io/badge/.NET_9-11120F?style=flat-square&logo=dotnet&logoColor=C52E36">
-  <img alt=".NET MAUI" src="https://img.shields.io/badge/.NET_MAUI-C52E36?style=flat-square&logo=dotnet&logoColor=white">
-  <img alt="Android" src="https://img.shields.io/badge/Android_SDK-11120F?style=flat-square&logo=android&logoColor=C52E36">
-  <img alt="XAML" src="https://img.shields.io/badge/XAML-C52E36?style=flat-square&logo=windows&logoColor=white">
-</p>
-
 - **C# & .NET 9** como linguagem e plataforma de execução;
 - **.NET MAUI** para abstração de componentes visuais multiplataforma;
 - **Android SDK** para empacotamento e execução em emuladores ou dispositivos físicos Android.
 
-## Arquitetura
+<details>
+<summary>Arquitetura</summary>
 
-`mermaid
+```mermaid
 flowchart LR
-    A[Código Compartilhado C# / XAML] --> B[MauiProgram · HostBuilder]
-    B --> C[Target Android · MauiApp2.Droid]
-    B --> D[Target Windows · WinUI]
-    C --> E[APK / Dispositivo Android]
-    D --> F[Aplicação Desktop Windows]
-`
+    A["Código Compartilhado C# / XAML"] --> B["MauiProgram · HostBuilder"]
+    B --> C["Target Android · MauiApp2.Droid"]
+    B --> D["Target Windows · WinUI"]
+    C --> E["APK / Dispositivo Android"]
+    D --> F["Aplicação Desktop Windows"]
+```
 
-## Estrutura do repositório
+</details>
 
-`	ext
+<details>
+<summary>Estrutura do repositório</summary>
+
+```text
 MauiAPP/
 ├── assets/
-│   ├── banner.png                          Banner principal MauiApp
-│   └── project-animal.png                  Símbolo da raia manta
+│   └── project-animal.png          Emblema do projeto
 ├── MauiApp2/
 │   ├── MauiApp2.Droid/                     Projeto nativo Android (Manifest, MainActivity, Resources)
 │   └── ...                                 Arquivos compartilhados da solução MAUI
 ├── MauiApp2.sln                            Solução Visual Studio
 ├── MauiApp-master.zip                      Snapshot compactado do projeto original
 └── README.md
-`
+```
 
-## Executando o código
+</details>
+
+## Como executar
 
 1. Certifique-se de ter o **SDK .NET 9** e a workload do MAUI instalada (dotnet workload install maui).
 2. Clone o repositório:
-   `powershell
+   ```powershell
    git clone https://github.com/arthurlynow098/MauiAPP.git
    cd MauiAPP
-   `
+   ```
 3. Abra MauiApp2.sln no **Visual Studio 2022** e selecione o emulador Android ou a máquina Windows para iniciar a depuração.
 
 ---
 
-<p align="center"><sub>Estudo · construção · evolução</sub><br><a href="https://github.com/arthurlynow098">Perfil</a> · <a href="https://arthurentsev.vercel.app/">Portfólio</a> · <a href="https://www.linkedin.com/in/entsevarthur/">LinkedIn</a></p>
+<p align="center">
+  <a href="https://github.com/arthurlynow098">GitHub</a> &nbsp;·&nbsp;
+  <a href="https://arthurentsev.vercel.app/">Portfólio</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/entsevarthur/">LinkedIn</a>
+</p>
