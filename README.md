@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="assets/project-animal.png" alt="Emblema de MauiAPP" width="144" height="144">
+  <img src="assets/banner-v2.png" alt="MauiAPP" width="100%">
 </p>
-
-<h1 align="center">MauiAPP</h1>
 
 <p align="center">Aplicação de estudo com interface compartilhada e suporte a Android e Windows.</p>
 
