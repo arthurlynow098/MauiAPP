@@ -4,7 +4,7 @@
 
 <p align="center">Aplicação de estudo com interface compartilhada e suporte a Android e Windows.</p>
 
-<p align="center"><img src="assets/docs/tags.svg" alt="C# · .NET MAUI · Multiplataforma" width="72%"></p>
+<p align="center"><img src="assets/docs/tags.svg" alt="C# · .NET MAUI · Multiplataforma" width="100%"></p>
 
 <p align="center"><a href="#visão-geral">Visão geral</a> &nbsp;·&nbsp; <a href="#recursos">Recursos</a> &nbsp;·&nbsp; <a href="#como-executar">Como executar</a></p>
 
@@ -16,11 +16,12 @@
 
 ![Mapa visual dos arquivos e responsabilidades](assets/docs/map.svg)
 
-| Área | O que você encontra | Acesso direto |
-|---|---|---|
-| **Solução** | Ponto de entrada para abrir os projetos na IDE. | [Abrir solução →](MauiApp2.sln) |
-| **Inicialização** | Configuração de inicialização do aplicativo. | [Abrir inicialização →](MauiApp2/MauiApp2.Droid/MauiProgram.cs) |
-| **Android** | Arquivos específicos da plataforma Android. | [Abrir android →](MauiApp2/MauiApp2.Droid) |
+<table width="100%">
+<tr><th align="left">Área</th><th align="left">O que você encontra</th><th align="left">Acesso direto</th></tr>
+<tr><td><strong>Solução</strong></td><td>Ponto de entrada para abrir os projetos na IDE.</td><td><a href="MauiApp2.sln">Abrir solução →</a></td></tr>
+<tr><td><strong>Inicialização</strong></td><td>Configuração de inicialização do aplicativo.</td><td><a href="MauiApp2/MauiApp2.Droid/MauiProgram.cs">Abrir inicialização →</a></td></tr>
+<tr><td><strong>Android</strong></td><td>Arquivos específicos da plataforma Android.</td><td><a href="MauiApp2/MauiApp2.Droid">Abrir android →</a></td></tr>
+</table>
 
 <a id="visão-geral"></a>
 
